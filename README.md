@@ -1,27 +1,11 @@
-/*****************************************************************************
-TITLE: Claims																																
-AUTHOR: Amish Mittal (1801CS07)
-Declaration of Authorship
-This txt file, claims.txt, is part of the assignment of CS321 at the 
-department of Computer Science and Engg, IIT Patna . 
-*****************************************************************************/
-
-Files:
-==========
-*All the files I submitted, asm.cpp, emu.cpp and claims.txt, have my name and student id at the start, along with a declaration of authorship.
-
-The evidence for Assembler and emulator including the output files from the test examples has also been uploaded. They are test1(3 output files), test2(1 output files), test3
-(3 output file), test4(3 output file), test5(3 output file), test6(1 output file), bubble(3 output files).
-
+AUTHOR: Amish Mittal (fliptrail)
 
 * It is compilable with: g++ assembler.cpp -o asm and g++ emu.cpp -o emu
 * To execute: ./asm test1.asm and ./emu test5.o
 
-=============================
-Program format and structure:
-=============================
-1. The assembler:
+# Program format and structure:
 
+1. The assembler:
 	* Uses single routine for both pases to assemble the program
 	* Handles extra spaces between operands and extra whitespaces except for labels for which space is necessary after semicolon.
 	* Handles comments in the same line and separate lines
@@ -40,17 +24,18 @@ Program format and structure:
 
 	* Keeps a track of mnemonic, opcodes and possible operands
 	* Keeps a track of the labels
+	* Generates a log file
 	* Generates an advanced listing file (showing the bytes produced for each instruction, and that instruction's mnemonic)
 	* Generates an object file
 	* Listing and object files are only created if there are no errors. They may be created if there are only warnings
-	* Assembles the pseudo instruction SET (for extra credit)
-
+	* Assembles the pseudo instruction SET
+	
 2. The emulator:
 
 	* Can load object file
 	* can produce memory dump
 	* can execute test program
-	* has -t (trace), -dump and -all
+	* has -t (trace), -dump and -all options
 	* can detect errors:
 		* Incorrect machine code
 		* Segmentation fault
@@ -58,9 +43,7 @@ Program format and structure:
 		* Invalid opcode
 	* can print metadata such as number of instructions executed, hexadecimal forms, memory dump, commands can be changed during runtime
 
-=============================
-Testing:
-=============================
+## Sample codes: 
 
 1. The assembler:
 
@@ -231,8 +214,3 @@ HALT    00000000
 Total instructions executed: 1044
 
 Working as expected
-
-Hence, the emulator is also verified with test files.
-**********************************************************
-Thank You!
-Amish Mittal
